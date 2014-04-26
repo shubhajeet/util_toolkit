@@ -1,0 +1,30 @@
+
+The list of commands that can be used to create an own image file of your memory card or make a pseudo image file for the purpose of testing the program
+A sample test is included in this 
+
+Following commands are requrired to be ran as root i.e sudo
+
+lsusb : shows information about the device connected via usb
+
+How to create and image file of the memory card or any other device
+dd if=/dev/sdb of=~/imagefilename bs=512 count=size_of_the device
+
+How to nullify the device
+dd if=/dev/zero of=/dev/device bs=512 count=size_of_the_device
+
+How to create a nullified file
+dd if=/dev/zero of=/filename bs=512 count=size_of_the_file
+
+How to format or create a filesystem 
+mkfs -t vfat filename_or_device
+
+How to create a loopback device
+losetup filename device 
+
+How to delete a loopback device
+losetup -d device 
+
+How to mount a device/file 
+mount -t vfat device_or_filename
+
+
