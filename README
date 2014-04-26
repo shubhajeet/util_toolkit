@@ -1,0 +1,75 @@
+/*************************************************************************
+*													
+*				README	
+*
+*************************************************************************/
+
+This is a c-project by Sujit Maharjan and Shishir Aditya Gautam Students of 2070 BEX IOE PULCHOWK.
+
+The follwing source code can be compiled by using make command in the terminal. All the settings are in Makefile.
+
+// For developers
+We have tried to adhere to following sourcecode style guide
+--> use camelcase for all identifiers
+--> try to make the source code readable
+--> use excessive comment to describe what a function does and comment style as per Doxygen standard
+
+// FOR tester
+
+The detail documentation is created by Doxygen so goto html/index.html
+
+// compiling from source 
+
+	~$make
+
+// deleting compiled code
+	
+	~$make cleanall
+
+/**********************
+ testing the code
+***********************/
+
+to test the recovery toolkit: it tries to recover .jpg file from imagefile card.raw in test directory and the recovered file will be created inside test directory 
+	~$make test-recovery
+
+to test the comprez toolkit: it tries to compress a sample.txt file inside test directory and creates comprez file with different mode of analysis and information coding
+	~$make test-comprez
+
+to test the decomprez-toolkit: it decompresses the comprez file created inside test
+	~$make test-decomprez
+
+deleting test
+	~$make clean-test
+
+/*********************
+ PROOF OF CONCEPT
+ COMPREZ IN A SIMPLE NETCAT SERVER
+*********************/
+
+to start a server
+	~$make start-server
+
+to request for the file from the same computer(as i have requested from a loopback ip address i.e 127.0.0.1)
+	~$make request-file
+
+
+/************************************
+*
+*	Syntax of util
+*
+************************************/
+	./util [options]
+
+Options		Description
+
+-v 		verbosity 
+-i 		image Filename from which jpeg files are to be recovered 
+-p 		filepath where recovered jpeg files are to be created 
+-c 		file to be compressed 
+-f  		the compressed file that is to be created 
+-d 		the file to be decompressed 
+-m 		mode of analysis i.e word (w) or ascii (a) 
+-a 		algorithm i.e. leastbit (lb) or probability(p)
+
+
